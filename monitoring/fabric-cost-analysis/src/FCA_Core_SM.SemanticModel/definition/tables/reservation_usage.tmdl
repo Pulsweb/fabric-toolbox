@@ -256,10 +256,11 @@ table reservation_usage
 
 		annotation SummarizationSetBy = Automatic
 
-	partition reservation_usage = entity
-		mode: directLake
-		source
-			entityName: reservation_usage
-			schemaName: dbo
-			expressionSource: DatabaseQuery
+	partition reservation_usage = m
+		source =
+				let
+				Source = DatabaseQuery,
+				Data = Source{[Schema="dbo",Item="reservation_usage"]}[Data]
+				in
+				Data
 

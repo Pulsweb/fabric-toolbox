@@ -111,10 +111,11 @@ table quota_fabric
 
 		annotation SummarizationSetBy = Automatic
 
-	partition quota_fabric = entity
-		mode: directLake
-		source
-			entityName: quota_fabric
-			schemaName: dbo
-			expressionSource: DatabaseQuery
+	partition quota_fabric = m
+		source =
+				let
+				Source = DatabaseQuery,
+				Data = Source{[Schema="dbo",Item="quota_fabric"]}[Data]
+				in
+				Data
 

@@ -103,16 +103,16 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "fca"
+                    "Entity": "meters"
                   }
                 },
-                "Property": "#TotalCost"
+                "Property": "Category"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }

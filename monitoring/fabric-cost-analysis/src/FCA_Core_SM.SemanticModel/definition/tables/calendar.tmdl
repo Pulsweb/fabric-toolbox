@@ -210,12 +210,13 @@ table calendar
 
 		annotation SummarizationSetBy = Automatic
 
-	partition calendar = entity
-		mode: directLake
-		source
-			entityName: calendar
-			schemaName: dbo
-			expressionSource: DatabaseQuery
+	partition calendar = m
+		source =
+				let
+				Source = DatabaseQuery,
+				Data = Source{[Schema="dbo",Item="calendar"]}[Data]
+				in
+				Data
 
 	changedProperty = Description
 

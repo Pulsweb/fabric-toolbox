@@ -155,10 +155,11 @@ table reservations
 
 		annotation SummarizationSetBy = Automatic
 
-	partition reservations = entity
-		mode: directLake
-		source
-			entityName: reservations
-			schemaName: dbo
-			expressionSource: DatabaseQuery
+	partition reservations = m
+		source =
+				let
+				Source = DatabaseQuery,
+				Data = Source{[Schema="dbo",Item="reservations"]}[Data]
+				in
+				Data
 

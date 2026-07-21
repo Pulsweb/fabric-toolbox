@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "b6546520832052017e66",
   "position": {
-    "x": 12.700900471836503,
-    "y": 439.03519516707456,
+    "x": 14.187192118226601,
+    "y": 374.67552768239585,
     "z": 7000,
-    "height": 80.606980273141119,
-    "width": 203.94537177541727,
+    "height": 79.802955665024626,
+    "width": 203.94088669950739,
     "tabOrder": 3000
   },
   "visual": {
@@ -247,6 +247,55 @@
             }
           ]
         }
+      },
+      {
+        "name": "18a226c069abc58a053d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "azuretags"
+              }
+            },
+            "Property": "HierarchySlicer Check"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "azuretags",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "a"
+                        }
+                      },
+                      "Property": "HierarchySlicer Check"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

@@ -171,7 +171,7 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "-0.27D"
                 }
               }
             }
@@ -285,7 +285,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "73216b53fc02b12f7502",
+        "name": "bd90da49a84ccee4a5c7",
         "field": {
           "Measure": {
             "Expression": {

@@ -39,6 +39,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "PowerSlicerA96234ADB8D143D1837FEC426BB34781"
+  ],
   "resourcePackages": [
     {
       "name": "RegisteredResources",

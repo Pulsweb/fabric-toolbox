@@ -1320,12 +1320,13 @@ table fca
 
 		annotation SummarizationSetBy = User
 
-	partition fca = entity
-		mode: directLake
-		source
-			entityName: focus_fabric
-			schemaName: dbo
-			expressionSource: DatabaseQuery
+	partition fca = m
+		source =
+				let
+				Source = DatabaseQuery,
+				Data = Source{[Schema="dbo",Item="focus_fabric"]}[Data]
+				in
+				Data
 
 	changedProperty = Name
 

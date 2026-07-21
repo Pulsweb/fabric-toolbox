@@ -54,10 +54,11 @@ table subscriptions
 
 		annotation SummarizationSetBy = Automatic
 
-	partition subscriptions = entity
-		mode: directLake
-		source
-			entityName: subscriptions
-			schemaName: dbo
-			expressionSource: DatabaseQuery
+	partition subscriptions = m
+		source =
+				let
+				Source = DatabaseQuery,
+				Data = Source{[Schema="dbo",Item="subscriptions"]}[Data]
+				in
+				Data
 
