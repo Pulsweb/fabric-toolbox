@@ -1,5 +1,6 @@
 model Model
 	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
 	defaultPowerBIDataSourceVersion: powerBI_V3
 	sourceQueryCulture: en-US
 
@@ -23,6 +24,7 @@ ref table resources
 ref table quota_fabric
 ref table reservations
 ref table reservation_usage
+ref table azuretags
 
 ref cultureInfo en-US
 

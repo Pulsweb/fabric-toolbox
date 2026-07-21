@@ -83,11 +83,12 @@ table resources
 
 		annotation SummarizationSetBy = User
 
-	partition resources = m
-		source =
-				let
-				Source = DatabaseQuery,
-				Data = Source{[Schema="dbo",Item="resources"]}[Data]
-				in
-				Data
+	partition resources = entity
+		mode: directLake
+		source
+			entityName: resources
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
 

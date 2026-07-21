@@ -114,13 +114,14 @@ table meters
 
 		annotation SummarizationSetBy = Automatic
 
-	partition meters = m
-		source =
-				let
-				Source = DatabaseQuery,
-				Data = Source{[Schema="dbo",Item="meters"]}[Data]
-				in
-				Data
+	partition meters = entity
+		mode: directLake
+		source
+			entityName: meters
+			schemaName: dbo
+			expressionSource: DatabaseQuery
 
 	changedProperty = Description
+
+	annotation PBI_ResultType = Table
 

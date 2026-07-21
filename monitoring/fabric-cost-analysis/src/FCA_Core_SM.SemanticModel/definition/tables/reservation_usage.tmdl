@@ -48,19 +48,6 @@ table reservation_usage
 
 		annotation SummarizationSetBy = Automatic
 
-	column SubAccountId
-		dataType: string
-		isHidden
-		sourceProviderType: varchar(8000)
-		lineageTag: 8d5331c6-d4fa-4cbe-b55b-d4483cc6cfe7
-		sourceLineageTag: SubAccountId
-		summarizeBy: none
-		sourceColumn: SubAccountId
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
 	column ReservationOrderId
 		dataType: string
 		sourceProviderType: varchar(8000)
@@ -256,11 +243,12 @@ table reservation_usage
 
 		annotation SummarizationSetBy = Automatic
 
-	partition reservation_usage = m
-		source =
-				let
-				Source = DatabaseQuery,
-				Data = Source{[Schema="dbo",Item="reservation_usage"]}[Data]
-				in
-				Data
+	partition reservation_usage = entity
+		mode: directLake
+		source
+			entityName: reservation_usage
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
 

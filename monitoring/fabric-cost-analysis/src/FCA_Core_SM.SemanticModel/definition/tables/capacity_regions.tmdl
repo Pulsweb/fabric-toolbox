@@ -87,11 +87,12 @@ table capacity_regions
 
 		annotation SummarizationSetBy = Automatic
 
-	partition capacity_regions = m
-		source =
-				let
-				Source = DatabaseQuery,
-				Data = Source{[Schema="dbo",Item="capacity_regions"]}[Data]
-				in
-				Data
+	partition capacity_regions = entity
+		mode: directLake
+		source
+			entityName: capacity_regions
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
 
