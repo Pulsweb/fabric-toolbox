@@ -122,6 +122,11 @@
             "metadata": "meters.Name"
           }
         }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
       ]
     },
     "visualContainerObjects": {

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "1347d3b057c09870e5ed",
   "position": {
-    "x": 12.700900471836503,
-    "y": 546.93925191824076,
+    "x": 14.187192118226601,
+    "y": 540,
     "z": 22000,
-    "height": 79.635811836115323,
-    "width": 203.94537177541727,
+    "height": 79.802955665024626,
+    "width": 203.94088669950739,
     "tabOrder": 25000
   },
   "visual": {
@@ -20,21 +20,6 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "capacity_regions"
-                    }
-                  },
-                  "Property": "RegionName"
-                }
-              },
-              "queryRef": "capacity_regions.RegionName",
-              "nativeQueryRef": "RegionName",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
                       "Entity": "resources"
                     }
                   },
@@ -42,9 +27,8 @@
                 }
               },
               "queryRef": "resources.ResourceName",
-              "nativeQueryRef": "CapacityName",
-              "active": false,
-              "displayName": "CapacityName"
+              "nativeQueryRef": "ResourceName",
+              "active": true
             }
           ]
         }
@@ -61,16 +45,10 @@
         "levels": [
           {
             "queryRefs": [
-              "capacity_regions.RegionName"
+              "resources.ResourceName"
             ],
             "isCollapsed": true,
             "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "resources.ResourceName"
-            ],
-            "isCollapsed": true
           }
         ],
         "root": {}
@@ -165,7 +143,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Region, Capacity'"
+                  "Value": "'Capacity'"
                 }
               }
             }
@@ -271,6 +249,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -286,6 +265,55 @@
             }
           ]
         }
+      },
+      {
+        "name": "873f627b31002ddd00d6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "azuretags"
+              }
+            },
+            "Property": "HierarchySlicer Check"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "azuretags",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "a"
+                        }
+                      },
+                      "Property": "HierarchySlicer Check"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

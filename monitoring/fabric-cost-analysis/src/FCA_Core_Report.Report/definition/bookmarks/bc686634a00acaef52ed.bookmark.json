@@ -24,7 +24,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "92ec85973e8d07afbbd6",
+                  "name": "4f94540d31a2a85c07e5",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -74,7 +74,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "99f228f42cf1cb40f603",
+                  "name": "4ff00617216b14ccbdd3",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -148,7 +148,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a436b8f6a0fdcc799587",
+                  "name": "bc452fc3e8f8029cf311",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -528,7 +528,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "bc77b4d44da46acd161a",
+                  "name": "83eac57463509c1080dd",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -580,104 +580,6 @@
               "objects": {}
             }
           },
-          "1d9b19bca039e5731d07": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "aaaef1c113b4202d32ad",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "c",
-                        "Entity": "capacity_regions",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "c"
-                                        }
-                                      },
-                                      "Property": "RegionName"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "capacity_regions"
-                        }
-                      },
-                      "Property": "RegionName"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "capacity_regions"
-                        }
-                      },
-                      "Property": "RegionName"
-                    }
-                  }
-                ]
-              }
-            }
-          },
           "e9dffc586205ff7defde": {
             "singleVisual": {
               "visualType": "textbox",
@@ -700,7 +602,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "833937ccccd95dd9484f",
+                  "name": "95e3e11a9b279dd16479",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -715,7 +617,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ee31d61984f3380b11b8",
+                  "name": "c9a34e0b0e5abdc4e215",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -764,7 +666,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "905716804b480451ab08",
+                  "name": "598e7e9ef77b15d71a70",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -779,7 +681,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bf1c56714d6a38c09b88",
+                  "name": "47b83032f1b8bc1e91c3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -818,7 +720,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e6c7878126ec08e43b31",
+                  "name": "4d7d33aae19dd888f595",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -838,7 +740,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dbd1e01feeefa788c925",
+                  "name": "974d6eba6f9a3c93228b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -888,7 +790,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "30dfe81fccf4b7f302ea",
+                  "name": "8ad7ec5082ace987af92",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -903,7 +805,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d643d86f42885e63813d",
+                  "name": "9688b4ffed77fefd04d7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -918,7 +820,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6619a9cf2b968993227c",
+                  "name": "876badd59b6b384f60d6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -933,7 +835,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "caf8cc20630ee31f3730",
+                  "name": "fbe14c5e27e41e418857",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -982,7 +884,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "17b9f8af968f920338ca",
+                  "name": "4f1a5b697a3d58bcdea0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -997,7 +899,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4e2cf76d13451e5430f2",
+                  "name": "7cac7859a602727ee658",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
